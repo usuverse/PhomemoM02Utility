@@ -236,8 +236,8 @@ async function printCanvas(canvas){
   const { bytes, rowBytes, h: height } = packMonochrome(imgData);
 
   const chunkSize    = parseInt($("#chunk")?.value || "160", 10);
-  const bandRows     = parseInt($("#bandRows")?.value || "32", 10);
-  const bandDelayMs  = parseInt($("#bandDelay")?.value || "12", 10);
+  const bandRows     = parseInt($("#bandRows")?.value || "0", 10);
+  const bandDelayMs  = parseInt($("#bandDelay")?.value || "0", 10);
   const chunkDelayMs = parseInt($("#chunkDelay")?.value || "0", 10);
 
   log(`Send ${w}x${h} | rowBytes=${rowBytes} | chunk=${chunkSize} | bandRows=${bandRows} | bandDelay=${bandDelayMs}ms | chunkDelay=${chunkDelayMs}ms`);
